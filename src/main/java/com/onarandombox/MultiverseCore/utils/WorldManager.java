@@ -431,7 +431,7 @@ public class WorldManager implements MVWorldManager {
      * @return True if the world world name is valid based on regex
      */
     private boolean isValidWorldName(String name) {
-        if (!worldNamePattern.matcher(name).matches()) {
+        if (!worldNamePattern.matcher(name).matches() || "plugins".equalsIgnoreCase(name)) {
             Logging.warning("Invalid world name '" + name + "'");
             Logging.warning("World name should not contain spaces or special characters!");
             return false;

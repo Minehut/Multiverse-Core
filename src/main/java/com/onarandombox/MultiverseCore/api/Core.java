@@ -207,11 +207,4 @@ public interface Core {
      * @return The configuration.
      */
     MultiverseCoreConfig getMVConfig();
-
-    /**
-     * Gets the buscript object for Multiverse.  This is what handles Javascript processing.
-     *
-     * @return The Multiverse buscript object.
-     */
-    Buscript getScriptAPI();
 }

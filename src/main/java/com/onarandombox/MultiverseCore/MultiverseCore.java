@@ -60,7 +60,6 @@ import com.onarandombox.MultiverseCore.commands.PurgeCommand;
 import com.onarandombox.MultiverseCore.commands.RegenCommand;
 import com.onarandombox.MultiverseCore.commands.ReloadCommand;
 import com.onarandombox.MultiverseCore.commands.RemoveCommand;
-import com.onarandombox.MultiverseCore.commands.ScriptCommand;
 import com.onarandombox.MultiverseCore.commands.SetSpawnCommand;
 import com.onarandombox.MultiverseCore.commands.SilentCommand;
 import com.onarandombox.MultiverseCore.commands.SpawnCommand;
@@ -778,7 +777,6 @@ public class MultiverseCore extends JavaPlugin implements MVPlugin, Core {
         this.commandHandler.registerCommand(new SilentCommand(this));
         this.commandHandler.registerCommand(new GeneratorCommand(this));
         this.commandHandler.registerCommand(new CheckCommand(this));
-        this.commandHandler.registerCommand(new ScriptCommand(this));
         this.commandHandler.registerCommand(new GameruleCommand(this));
         this.commandHandler.registerCommand(new GamerulesCommand(this));
     }
@@ -1191,11 +1189,6 @@ public class MultiverseCore extends JavaPlugin implements MVPlugin, Core {
     @Deprecated
     public static MultiverseCoreConfiguration getStaticConfig() {
         return MultiverseCoreConfiguration.getInstance();
-    }
-
-    @Override
-    public Buscript getScriptAPI() {
-        return buscript;
     }
 
     public UnsafeCallWrapper getUnsafeCallWrapper() {
