@@ -352,14 +352,7 @@ public class MultiverseCore extends JavaPlugin implements MVPlugin, Core {
      * Initializes the buscript javascript library.
      */
     private void initializeBuscript() {
-        try {
-            buscript = new Buscript(this);
-            // Add global variable "multiverse" to javascript environment
-            buscript.setScriptVariable("multiverse", this);
-        } catch (NullPointerException e) {
-            buscript = null;
-            Logging.warning("Buscript failed to load! The script command will be disabled!");
-        }
+        buscript = null;
     }
 
     private void initializeDestinationFactory() {
